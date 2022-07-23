@@ -19,6 +19,9 @@ try{
         const req = https.request(options, res => {
         console.log(`Poll ${++pollCount} - statusCode: ${res.statusCode}`);  
         });
+        req.on('error', error => {
+            console.error(error);
+          });
         if((new Date() - startTime)/ 1000)
         {
             const response = "Success"
@@ -30,6 +33,7 @@ try{
 }
 catch(err)
 {
-    core.setFailed(error.message);
+    console.log(err)
+    core.setFailed(err.message);
     core.setOutput("response", "Failure")
 }

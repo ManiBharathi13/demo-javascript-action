@@ -22,7 +22,7 @@ try{
         req.on('error', error => {
             console.error(error);
           });
-        if((new Date() - startTime)/ 1000)
+        if((new Date() - startTime)/ 1000 >= 60)
         {
             const response = "Success"
             core.setOutput("response", response)

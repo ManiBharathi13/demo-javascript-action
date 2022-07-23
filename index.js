@@ -1,18 +1,13 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const https = require('https');
+
 const axios = require('axios');
 
 try{
     const name = core.getInput('name')
     console.log(`Hello ${name}`)
     console.log('Polling every 5s for 1 minute')
-    const options = {
-        hostname: 'fantasy.premierleague.com',
-        port: 443,
-        path: '/api/bootstrap-static/',
-        method: 'GET',
-      };
+  
     let startTime = new Date()
     console.log("Polling Start Time : "+  startTime.toGMTString())
     let pollCount =0 

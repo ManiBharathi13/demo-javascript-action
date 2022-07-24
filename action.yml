@@ -4,15 +4,15 @@ inputs:
   username:  
     description: 'Botz Username'
     required: true
-    default: ''
-  secret:
-    description: 'Botz Secret',
-    required: true
-    default: ''
+    
   onDemandScheduleName:
     description: 'The name of the On Demand schedule to be executed'
     required: true
-    default: ''
+    
+  secret:
+    description: 'Botz Secret',
+    required: true
+    
   interval:
     description : 'Time interval between two consecutive polls in seconds'
     default: 5

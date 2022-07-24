@@ -1,13 +1,35 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  name:  # id of input
-    description: 'Name'
+  username:  
+    description: 'Botz Username'
     required: true
-    default: 'John'
+    default: ''
+  secret:
+    description: 'Botz Secret',
+    required: true
+    default: ''
+  onDemandScheduleName:
+    description: 'The name of the On Demand schedule to be executed'
+    required: true
+    default: ''
+  interval:
+    description : 'Time interval between two consecutive polls in seconds'
+    default: 5
+  timeout:
+    description : 'Action Timeout in seconds'
+    default : 3600
+  botzProjectId:
+    description : 'Botz Project Id'
+    required: true
+  botzAccountId :
+    description : 'Botz Account Id'
+    required: true
 outputs:
-  response: # id of output
-    description: 'Response'
+  status: 
+    description: 'Execution Group Status'
+  errorMessages:
+    description: 'List of Error Message if Any'
 runs:
   using: 'node16'
   main: 'index.js'

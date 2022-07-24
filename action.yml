@@ -10,15 +10,18 @@ inputs:
     required: true
     
   secret:
-    description: 'Botz Secret',
+    description: 'Botz Secret'
     required: true
     
   interval:
     description : 'Time interval between two consecutive polls in seconds'
+    required :  false
     default: 5
+   
   timeout:
     description : 'Action Timeout in seconds'
     default : 3600
+    required :  false
   botzProjectId:
     description : 'Botz Project Id'
     required: true
